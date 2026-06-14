@@ -9,9 +9,10 @@
 \begin{document}
 
 %% ════════════════════════════════════════════════════════════════════════════
-%%  TWO-COLUMN LAYOUT  (left 65% | right 35%)
+%%  TWO-COLUMN LAYOUT  (left 735% | right 265%)
 %% ════════════════════════════════════════════════════════════════════════════
-\columnratio{0.63}
+\columnratio{0.735}
+\setlength{\columnsep}{0.95cm}
 \begin{paracol}{2}
 
 %% ─────────────────────────────────────────────────────────────────────────────
@@ -40,16 +41,24 @@ Currently, I am looking to join a company as a computer engineer focused on \tex
 \underline{Machine Learning}.
 }
 
-\vspace{6pt}
-{\color{cvlightgray}\hrule height 0.4pt}
+% \vspace{6pt}
+% {\color{cvlightgray}\hrule height 0.4pt}
 \vspace{4pt}
 
 %% ── EXPERIENCE ──────────────────────────────────────────────────────────────
 \cvsection{Experience}
+\newtimeline
 
-\cventry{Feb 2025 -- Present}{Valencia, Spain}{dotgreen}%
-  {University Internship 3:}{\textit{Solver}}%
-  {At \textbf{Solver}, as a data analyst, I study the needs and data of the company's clients,
+\cventry{Nov 2025 -- Present}{Valencia, Spain}{dotgreen}%
+  {Automation Engineer}{\textit{Solver}}%
+  {At \textbf{Vidext}, I returned as an expert in automation and artificial intelligence, developing
+   pipelines and processes that allow the company to automate tasks and processes, saving time and
+   money. At the same time, I contribute my AI knowledge to improve the company's processes and
+   develop new solutions.}
+
+\cventry{Feb 2025 -- Nov 2025}{Valencia, Spain}{dotgray}%
+  {AI Engineer}{\textit{Solver}}%
+  {At \textbf{Solver}, as an AI engineer, I study the needs and data of the company's clients,
    developing AI models and researching technologies the company requires.}
 
 \cventry{Jun 2024 -- Sep 2024}{Valencia, Spain}{dotgray}%
@@ -63,17 +72,20 @@ Currently, I am looking to join a company as a computer engineer focused on \tex
   {During this internship I learned to manage and develop extensions for Microsoft's
    \textbf{ERP ``Navision''.}}
 
-\cventry{Jan 2022 -- Jun 2024}{Almenara, Castellón, Spain}{dotgray}%
+\cventry{Jan 2022 -- Jun 2024}{Almenara, Spain}{dotgray}%
   {Image Editor, Freelance:}{\textit{Fiverr}}%
   {On this platform I offered my \textbf{image editing skills} to clients worldwide.}
 
-\cventry{Jun 2021 -- Jun 2024}{Almenara, Castellón, Spain}{dotgray}%
+\cventry{Jun 2021 -- Jun 2024}{Almenara, Spain}{dotgray}%
   {Other:}{\textit{Tutor, Waiter and Kitchen Assistant}}%
   {During my student years I worked in various roles to support my family and gain
    professional experience.}
 
+\drawtimelinelines
+
 %% ── EDUCATION ───────────────────────────────────────────────────────────────
 \cvsection{Education}
+\newtimeline
 
 \cventry{Sep 2024 -- Jan 2025}{Lausanne, Switzerland}{dotgray}%
   {Erasmus: Bachelor's in Computer Engineering}{}%
@@ -83,9 +95,11 @@ Currently, I am looking to join a company as a computer engineer focused on \tex
   {Bachelor's in Computer Engineering}{}%
   {\textit{Universitat Politècnica de València (UPV)}}
 
-\cventry{Sep 2015 -- Jun 2021}{Almenara, Castellón, Spain}{dotgray}%
+\cventry{Sep 2015 -- Jun 2021}{Almenara, Spain}{dotgray}%
   {Secondary School \& Sixth Form}{}%
   {\textit{IES Almenara}}
+
+\drawtimelinelines
 
 %% ── PROGRAMMING LANGUAGES / TECHNOLOGIES ────────────────────────────────────
 \cvsection{Programming Languages, Environments \& Technologies}
@@ -104,31 +118,29 @@ Currently, I am looking to join a company as a computer engineer focused on \tex
 % Shaded background for right column
 \begin{tikzpicture}[remember picture, overlay]
   \fill[cvbgright] (current page.north east)
-    rectangle ([xshift=-0.37\paperwidth] current page.south east);
+    rectangle ([xshift=-0.30\paperwidth] current page.south east);
+  \draw[cvlightblue, line width=1.25pt]
+    ([xshift=-0.30\paperwidth] current page.north east) --
+    ([xshift=-0.30\paperwidth] current page.south east);
 \end{tikzpicture}
 
-\vspace{4pt}
+% \vspace{0pt}
 
 %% ── PHOTO ───────────────────────────────────────────────────────────────────
 \begin{center}
   \begin{tikzpicture}
-    \clip (0,0) circle (1.5cm);
-    \node at (0,0) {\includegraphics[width=3cm]{Miquel.png}};
+    \node at (0,0) {\includegraphics[width=4cm]{Miquel.png}};
   \end{tikzpicture}
 \end{center}
 
-\vspace{4pt}
+\vspace{1pt}
 
 %% ── CONTACT ─────────────────────────────────────────────────────────────────
 \rightsection{Contact}
 
 \contactitem{Email}{\href{mailto:miquelgc2003@gmail.com}{miquelgc2003@gmail.com}}
 
-\contactitem{Location}{Almenara (Castellón), CP: 12590}
-
-\contactitem{Phone}{+34 666 24 67 09}
-
-\contactitem{Date of Birth}{October 21st, 2003}
+\contactitem{Location}{Valencia, Spain}
 
 {\small\textbf{Links}}\par
 \vspace{2pt}
@@ -150,7 +162,8 @@ Currently, I am looking to join a company as a computer engineer focused on \tex
   \item Eager to learn and grow in my IT career.
   \item B1 driving licence and own vehicle.
   \item Best academic record award in my cohort for the 2022--23 academic year.
-  \item To date, I have received 20 honours distinctions in degree subjects.
+  \item ARA distinction (High Academic Performance) in the degree programme.
+  \item +20 honours distinctions in my Bachelor's and Master's degrees.
 \end{cvlist}
 
 %% ── LANGUAGES ───────────────────────────────────────────────────────────────
@@ -167,7 +180,7 @@ Currently, I am looking to join a company as a computer engineer focused on \tex
 
 \begin{cvlist}
   \item Photoshop (Images)
-  \item Premiere (Video)
+  \item Premier (Video)
 \end{cvlist}
 
 \end{paracol}

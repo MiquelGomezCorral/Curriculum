@@ -26,16 +26,20 @@
 \RequirePackage{ifthen}
 \RequirePackage{etoolbox}
 \RequirePackage{dashrule}
+\RequirePackage{eso-pic}
 
 \usetikzlibrary{shapes.geometric, positioning}
 
 %% ─── COLORS ─────────────────────────────────────────────────────────────────
 \definecolor{cvblue}{RGB}{70, 130, 180}       % Section titles / headings
+\definecolor{cvlightblue}{RGB}{194, 208, 227}       % Section titles / headings
+\definecolor{cvlighterblue}{RGB}{216, 232, 250}       % Section titles / headings
 \definecolor{cvdarkblue}{RGB}{31, 73, 125}    % Name
 \definecolor{cvgray}{RGB}{100, 100, 100}      % Date/location text
 \definecolor{cvlightgray}{RGB}{220, 220, 220} % Lines/rules
-\definecolor{cvbgright}{RGB}{240, 245, 252}   % Right column background
-\definecolor{dotgreen}{RGB}{92, 184, 92}      % Active/current job dot
+\definecolor{cvbgright}{RGB}{221, 234, 248}   % Right column background
+\definecolor{dotgreen}{RGB}{123, 201, 122}      % Active/current job dot
+\definecolor{dotlightgreen}{RGB}{176, 232, 162}      % Active/current job dot
 \definecolor{dotgray}{RGB}{180, 180, 180}     % Past job dot
 
 %% ─── HYPERREF SETUP ─────────────────────────────────────────────────────────
@@ -49,7 +53,7 @@
 %% ─── NO PAGE NUMBERS ────────────────────────────────────────────────────────
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{2pt}
+\setlength{\parskip}{0pt}
 
 %% ─── FONTS ──────────────────────────────────────────────────────────────────
 \renewcommand{\familydefault}{\sfdefault}
@@ -64,23 +68,57 @@
   \vspace{4pt}%
 }
 
-%% ─── TIMELINE DOT ───────────────────────────────────────────────────────────
-% \cvdot[color] — the circle on the timeline
-\newcommand{\cvdot}[1][dotgray]{%
-  \tikz[baseline=-0.5ex]\draw[fill=#1, draw=#1] (0,0) circle (4pt);%
+%% ─── TIMELINE ────────────────────────────────────────────────────────────────
+\newcounter{cventrycount}
+\newcounter{cvlineid}
+
+\newcommand{\cvdot}[1][cvblue]{%
+  \stepcounter{cventrycount}%
+  \begin{tikzpicture}[baseline=(cvdot-\thecvlineid-\thecventrycount.center), remember picture]
+    \ifstrequal{#1}{dotgreen}{%
+      \node[circle, fill=dotlightgreen, draw=dotgreen, line width=1.2pt, inner sep=0pt, minimum size=10pt] (cvdot-\thecvlineid-\thecventrycount) at (0,0) {};
+    }{%
+      \node[circle, fill=cvlighterblue, draw=cvlightblue, line width=1.2pt, inner sep=0pt, minimum size=10pt] (cvdot-\thecvlineid-\thecventrycount) at (0,0) {};
+    }%
+  \end{tikzpicture}%
+}
+
+\newcommand{\newtimeline}{%
+  \setcounter{cventrycount}{0}%
+  \stepcounter{cvlineid}%
+}
+
+\newcommand{\drawtimelinelines@draw}[3]{%
+  \AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+      \draw[cvlightblue, line width=1.5pt] (cvdot-#1-1.center) -- (cvdot-#1-#2.center);
+    \end{tikzpicture}%
+  }%
+}
+
+\newcommand{\drawtimelinelines}[1][cvlightgray]{%
+  \ifnum\value{cventrycount}>1
+    \begingroup
+      \edef\temp{%
+        \noexpand\drawtimelinelines@draw{\thecvlineid}{\thecventrycount}{#1}%
+      }%
+      \temp
+    \endgroup
+  \fi
+  \setcounter{cventrycount}{0}%
 }
 
 %% ─── EXPERIENCE / EDUCATION ENTRY ───────────────────────────────────────────
 % Usage: \cventry{date}{location}{dot-color}{title}{company}{description}
 \newcommand{\cventry}[6]{%
-  \begin{tabular}{p{3.1cm} c p{8.5cm}}
+  \begin{tabular}[t]{p{3.1cm} c p{8.5cm}}
     {\small\color{cvgray}#2 \newline \textit{\small #1}} &
     \cvdot[#3] &
     {\small\textbf{#4}%
     \ifthenelse{\equal{#5}{}}{}{\textit{ #5}}%
     \newline {\footnotesize #6}}
   \end{tabular}%
-  \vspace{3pt}%
+  \vspace{0pt}%
 }
 
 %% ─── CONTACT ITEM ───────────────────────────────────────────────────────────
