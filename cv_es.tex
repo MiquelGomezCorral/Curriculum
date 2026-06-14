@@ -1,0 +1,176 @@
+\documentclass{miquelcv}
+\usepackage[spanish]{babel}
+
+% ─── Point to shared class ────────────────────────────────────────────────────
+% If compiling from the /es folder, symlink or copy miquelcv.cls here, or add:
+% \makeatletter\def\input@path{{../shared/}}\makeatother
+% (See README.md for build instructions)
+
+\begin{document}
+
+%% ════════════════════════════════════════════════════════════════════════════
+%%  TWO-COLUMN LAYOUT  (left 65% | right 35%)
+%% ════════════════════════════════════════════════════════════════════════════
+\columnratio{0.63}
+\begin{paracol}{2}
+
+%% ─────────────────────────────────────────────────────────────────────────────
+%%  LEFT COLUMN
+%% ─────────────────────────────────────────────────────────────────────────────
+
+%% ── HEADER ──────────────────────────────────────────────────────────────────
+{\color{cvdarkblue}\Huge\bfseries MIQUEL GÓMEZ CORRAL}
+
+\vspace{4pt}
+{\color{cvblue}\large Estudiante de Master y Junior Python-IA developer, UPV}
+
+\vspace{8pt}
+{\small
+Durante mis estudios he aprendido sobre Optimización, aprendizaje automático, Inteligencia
+Artificial, Algoritmos. Esto, sumado a mi pasión y a los proyectos que he desarrollado por mi
+cuenta, he conseguir competencias Informáticas son de calidad, desenvolviéndome sin
+problemas en diferentes lenguajes y entornos de trabajo.
+
+\vspace{4pt}
+A la vez, he trabajo en diversas empresas del sector, poniendo en práctica mis conocimientos
+y demostrando la validez de mis estudios.
+
+\vspace{4pt}
+Actualmente, busco integrarme como informático \textbf{en el sector} de la \underline{IA} y \underline{Machine Learning}.
+}
+
+\vspace{6pt}
+{\color{cvlightgray}\hrule height 0.4pt}
+\vspace{4pt}
+
+%% ── EXPERIENCIA ─────────────────────────────────────────────────────────────
+\cvsection{Experiencia}
+
+\cventry{Feb 2025 -- Actualidad}{Valencia, España}{dotgreen}%
+  {Prácticas universitarias 3:}{\textit{Solver}}%
+  {En \textbf{solver}, como analista de datos, estudios necesidades y datos de los clientes
+   de la empresa, desarrollando modelos de IA e investigando tecnologías que la empresa necesite.}
+
+\cventry{Jun 2024 -- Sep 2024}{Valencia, España}{dotgray}%
+  {Prácticas universitarias 2:}{\textit{Vidext}}%
+  {En \textbf{Vidext}, he aprendido a desarrollar \textbf{aplicaciones WEB} en \textbf{React}
+   y \textbf{Next.js}. Con ello, he creado la landing page de la empresa y una aplicación para
+   uso interno de los empleados.}
+
+\cventry{Sep 2022 -- Mar 2023}{Valencia, España}{dotgray}%
+  {Prácticas universitarias 1:}{\textit{Lãberit Sistemas}}%
+  {Durante los meses de prácticas he aprendido a manejar y desarrollar extensiones del
+   \textbf{ERP de Microsoft ``Navision''.}}
+
+\cventry{Ene 2022 -- Jun 2024}{Almenara, Castellón, España}{dotgray}%
+  {Editor de Imágenes, Freelance:}{\textit{Fiverr}}%
+  {En esta página he puesto a disposición de diversos clientes mis \textbf{habilidades en la
+   edición de imágenes}.}
+
+\cventry{Jun 2021 -- Jun 2024}{Almenara, Castellón, España}{dotgray}%
+  {Otros:}{\textit{Profesor, Camarero y Pinche de cocina}}%
+  {Durante mis años de estudiante, he trabajado en diferentes puestos para ayudar en casa y
+   ganar experiencia laboral.}
+
+%% ── EDUCACIÓN ───────────────────────────────────────────────────────────────
+\cvsection{Educación}
+
+\cventry{Sep 2024 -- Ene 2025}{Lausanne, Suiza}{dotgray}%
+  {Erasmus: Grado en Ingeniería informática}{}%
+  {\textit{Ecole polytechnique fédérale de Lausanne (EPFL)}}
+
+\cventry{Sep 2021 -- Jun 2025}{Valencia, España}{dotgray}%
+  {Grado en Ingeniería informática}{}%
+  {\textit{Universitat Politècnica de València (UPV)}}
+
+\cventry{Sep 2015 -- Jun 2021}{Almenara, Castellón, España}{dotgray}%
+  {ESO y Bachillerato}{}%
+  {\textit{IES Almenara}}
+
+%% ── LENGUAJES / TECNOLOGÍAS ─────────────────────────────────────────────────
+\cvsection{Lenguajes de Programación, Entornos y Tecnologías}
+
+\skillrow{Nivel Intermedio-alto}{Python | React | TypeScript | JavaScript | CSS | Java.}
+\skillrow{Nivel Intermedio}{C | C++ | C\# | Unity | SQL | Mathematica | RISC-V | JavaFx.}
+\skillrow{Nivel intermedio-bajo}{Haskell | Prolog.}
+\skillrow{Librerías Python}{Pandas | SKlearn | Mathplot | Plotly | Numpy | Pytorch | FastAPI\ldots}
+\skillrow{Librerías TypeScript}{Tailwind | Zustand\ldots}
+
+%% ─────────────────────────────────────────────────────────────────────────────
+%%  RIGHT COLUMN
+%% ─────────────────────────────────────────────────────────────────────────────
+\switchcolumn
+
+% Shaded background for right column
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[cvbgright] (current page.north east)
+    rectangle ([xshift=-0.37\paperwidth] current page.south east);
+\end{tikzpicture}
+
+\vspace{4pt}
+
+%% ── PHOTO ───────────────────────────────────────────────────────────────────
+% Place your photo as photo.jpg in the same folder as this .tex file
+\begin{center}
+  \begin{tikzpicture}
+    \clip (0,0) circle (1.5cm);
+    \node at (0,0) {\includegraphics[width=3cm]{Miquel.png}};
+  \end{tikzpicture}
+\end{center}
+
+\vspace{4pt}
+
+%% ── CONTACTO ────────────────────────────────────────────────────────────────
+\rightsection{Contacto}
+
+\contactitem{Email}{\href{mailto:miquelgc2003@gmail.com}{miquelgc2003@gmail.com}}
+
+\contactitem{Dirección}{Almenara (Castellón), CP: 12590}
+
+\contactitem{Teléfono}{+34 666 24 67 09}
+
+\contactitem{Fecha de nacimiento}{21 de Octubre del 2003}
+
+{\small\textbf{Enlaces}}\par
+\vspace{2pt}
+{\small\underline{Web:}}\newline
+{\small\href{https://miquelgc.net}{https://miquelgc.net}}\par
+\vspace{3pt}
+{\small\underline{LinkedIn}}\newline
+{\small\href{https://linkedin.com/in/miquel-gomez-corral}{linkedin.com/in/miquel-gomez-corral}}\par
+\vspace{3pt}
+{\small\underline{Github}}\newline
+{\small\href{https://github.com/MiquelGomezCorral}{github.com/MiquelGomezCorral}}\par
+
+%% ── APTITUDES Y LOGROS ──────────────────────────────────────────────────────
+\rightsection{Aptitudes y Logros}
+
+\begin{cvlist}
+  \item Abierto al trabajo en equipo.
+  \item Capacidad de Liderazgo.
+  \item Interés en aprender y desarrollar mi carrera informática.
+  \item Carné de conducir B1 y vehículo propio.
+  \item Premio al mejor expediente en el curso 22-23 de mi promoción.
+  \item Hasta la fecha, he obtenido 20 matrículas de honor en asignaturas del grado.
+\end{cvlist}
+
+%% ── IDIOMAS ─────────────────────────────────────────────────────────────────
+\rightsection{Idiomas}
+
+{\small\textbf{Castellano y Valenciano}}\newline
+{\small Nativo.}\par
+\vspace{4pt}
+{\small\textbf{Inglés}}\newline
+{\small B2 Certificado por Cambridge.}\par
+
+%% ── HERRAMIENTAS ADOBE ──────────────────────────────────────────────────────
+\rightsection{Herramientas Adobe}
+
+\begin{cvlist}
+  \item Photoshop (Imágenes)
+  \item Premier (Video)
+\end{cvlist}
+
+\end{paracol}
+
+\end{document}

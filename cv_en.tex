@@ -1,0 +1,175 @@
+\documentclass{miquelcv}
+\usepackage[english]{babel}
+
+% ─── Point to shared class ────────────────────────────────────────────────────
+% If compiling from the /en folder, symlink or copy miquelcv.cls here, or add:
+% \makeatletter\def\input@path{{../shared/}}\makeatother
+% (See README.md for build instructions)
+
+\begin{document}
+
+%% ════════════════════════════════════════════════════════════════════════════
+%%  TWO-COLUMN LAYOUT  (left 65% | right 35%)
+%% ════════════════════════════════════════════════════════════════════════════
+\columnratio{0.63}
+\begin{paracol}{2}
+
+%% ─────────────────────────────────────────────────────────────────────────────
+%%  LEFT COLUMN
+%% ─────────────────────────────────────────────────────────────────────────────
+
+%% ── HEADER ──────────────────────────────────────────────────────────────────
+{\color{cvdarkblue}\Huge\bfseries MIQUEL GÓMEZ CORRAL}
+
+\vspace{4pt}
+{\color{cvblue}\large Master's Student and Junior Python-AI Developer, UPV}
+
+\vspace{8pt}
+{\small
+Throughout my studies I have learned about Optimization, Machine Learning, Artificial
+Intelligence, and Algorithms. Combined with my passion and the personal projects I have
+developed, I have acquired solid Computer Science skills, adapting easily to different
+programming languages and working environments.
+
+\vspace{4pt}
+At the same time, I have worked in several companies in the sector, putting my knowledge
+into practice and proving the value of my studies.
+
+\vspace{4pt}
+Currently, I am looking to join a company as a computer engineer focused on \textbf{AI} and
+\underline{Machine Learning}.
+}
+
+\vspace{6pt}
+{\color{cvlightgray}\hrule height 0.4pt}
+\vspace{4pt}
+
+%% ── EXPERIENCE ──────────────────────────────────────────────────────────────
+\cvsection{Experience}
+
+\cventry{Feb 2025 -- Present}{Valencia, Spain}{dotgreen}%
+  {University Internship 3:}{\textit{Solver}}%
+  {At \textbf{Solver}, as a data analyst, I study the needs and data of the company's clients,
+   developing AI models and researching technologies the company requires.}
+
+\cventry{Jun 2024 -- Sep 2024}{Valencia, Spain}{dotgray}%
+  {University Internship 2:}{\textit{Vidext}}%
+  {At \textbf{Vidext}, I learned to develop \textbf{web applications} using \textbf{React}
+   and \textbf{Next.js}. I built the company's landing page and an internal application for
+   employee use.}
+
+\cventry{Sep 2022 -- Mar 2023}{Valencia, Spain}{dotgray}%
+  {University Internship 1:}{\textit{Lãberit Sistemas}}%
+  {During this internship I learned to manage and develop extensions for Microsoft's
+   \textbf{ERP ``Navision''.}}
+
+\cventry{Jan 2022 -- Jun 2024}{Almenara, Castellón, Spain}{dotgray}%
+  {Image Editor, Freelance:}{\textit{Fiverr}}%
+  {On this platform I offered my \textbf{image editing skills} to clients worldwide.}
+
+\cventry{Jun 2021 -- Jun 2024}{Almenara, Castellón, Spain}{dotgray}%
+  {Other:}{\textit{Tutor, Waiter and Kitchen Assistant}}%
+  {During my student years I worked in various roles to support my family and gain
+   professional experience.}
+
+%% ── EDUCATION ───────────────────────────────────────────────────────────────
+\cvsection{Education}
+
+\cventry{Sep 2024 -- Jan 2025}{Lausanne, Switzerland}{dotgray}%
+  {Erasmus: Bachelor's in Computer Engineering}{}%
+  {\textit{École Polytechnique Fédérale de Lausanne (EPFL)}}
+
+\cventry{Sep 2021 -- Jun 2025}{Valencia, Spain}{dotgray}%
+  {Bachelor's in Computer Engineering}{}%
+  {\textit{Universitat Politècnica de València (UPV)}}
+
+\cventry{Sep 2015 -- Jun 2021}{Almenara, Castellón, Spain}{dotgray}%
+  {Secondary School \& Sixth Form}{}%
+  {\textit{IES Almenara}}
+
+%% ── PROGRAMMING LANGUAGES / TECHNOLOGIES ────────────────────────────────────
+\cvsection{Programming Languages, Environments \& Technologies}
+
+\skillrow{Upper-intermediate}{Python | React | TypeScript | JavaScript | CSS | Java.}
+\skillrow{Intermediate}{C | C++ | C\# | Unity | SQL | Mathematica | RISC-V | JavaFx.}
+\skillrow{Lower-intermediate}{Haskell | Prolog.}
+\skillrow{Python Libraries}{Pandas | SKlearn | Mathplot | Plotly | Numpy | Pytorch | FastAPI\ldots}
+\skillrow{TypeScript Libraries}{Tailwind | Zustand\ldots}
+
+%% ─────────────────────────────────────────────────────────────────────────────
+%%  RIGHT COLUMN
+%% ─────────────────────────────────────────────────────────────────────────────
+\switchcolumn
+
+% Shaded background for right column
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[cvbgright] (current page.north east)
+    rectangle ([xshift=-0.37\paperwidth] current page.south east);
+\end{tikzpicture}
+
+\vspace{4pt}
+
+%% ── PHOTO ───────────────────────────────────────────────────────────────────
+\begin{center}
+  \begin{tikzpicture}
+    \clip (0,0) circle (1.5cm);
+    \node at (0,0) {\includegraphics[width=3cm]{Miquel.png}};
+  \end{tikzpicture}
+\end{center}
+
+\vspace{4pt}
+
+%% ── CONTACT ─────────────────────────────────────────────────────────────────
+\rightsection{Contact}
+
+\contactitem{Email}{\href{mailto:miquelgc2003@gmail.com}{miquelgc2003@gmail.com}}
+
+\contactitem{Location}{Almenara (Castellón), CP: 12590}
+
+\contactitem{Phone}{+34 666 24 67 09}
+
+\contactitem{Date of Birth}{October 21st, 2003}
+
+{\small\textbf{Links}}\par
+\vspace{2pt}
+{\small\underline{Web:}}\newline
+{\small\href{https://miquelgc.net}{https://miquelgc.net}}\par
+\vspace{3pt}
+{\small\underline{LinkedIn}}\newline
+{\small\href{https://linkedin.com/in/miquel-gomez-corral}{linkedin.com/in/miquel-gomez-corral}}\par
+\vspace{3pt}
+{\small\underline{Github}}\newline
+{\small\href{https://github.com/MiquelGomezCorral}{github.com/MiquelGomezCorral}}\par
+
+%% ── SKILLS & ACHIEVEMENTS ───────────────────────────────────────────────────
+\rightsection{Skills \& Achievements}
+
+\begin{cvlist}
+  \item Open to teamwork.
+  \item Leadership capacity.
+  \item Eager to learn and grow in my IT career.
+  \item B1 driving licence and own vehicle.
+  \item Best academic record award in my cohort for the 2022--23 academic year.
+  \item To date, I have received 20 honours distinctions in degree subjects.
+\end{cvlist}
+
+%% ── LANGUAGES ───────────────────────────────────────────────────────────────
+\rightsection{Languages}
+
+{\small\textbf{Spanish \& Valencian}}\newline
+{\small Native.}\par
+\vspace{4pt}
+{\small\textbf{English}}\newline
+{\small B2 -- Cambridge Certified.}\par
+
+%% ── ADOBE TOOLS ─────────────────────────────────────────────────────────────
+\rightsection{Adobe Tools}
+
+\begin{cvlist}
+  \item Photoshop (Images)
+  \item Premiere (Video)
+\end{cvlist}
+
+\end{paracol}
+
+\end{document}
