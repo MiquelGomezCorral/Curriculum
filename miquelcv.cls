@@ -63,7 +63,7 @@
 \newcommand{\cvsection}[1]{%
   \vspace{6pt}%
   {\color{cvblue}\large\bfseries\MakeUppercase{#1}}%
-  \vspace{2pt}%
+  \vspace{4pt}%
   {\color{cvlightgray}\hrule height 0.8pt}%
   \vspace{4pt}%
 }
@@ -74,7 +74,7 @@
 
 \newcommand{\cvdot}[1][cvblue]{%
   \stepcounter{cventrycount}%
-  \begin{tikzpicture}[baseline=(cvdot-\thecvlineid-\thecventrycount.center), remember picture]
+  \begin{tikzpicture}[baseline={([yshift=-3.0pt] cvdot-\thecvlineid-\thecventrycount.center)}, remember picture]
     \ifstrequal{#1}{dotgreen}{%
       \node[circle, fill=dotlightgreen, draw=dotgreen, line width=1.2pt, inner sep=0pt, minimum size=10pt] (cvdot-\thecvlineid-\thecventrycount) at (0,0) {};
     }{%
@@ -111,8 +111,9 @@
 %% ─── EXPERIENCE / EDUCATION ENTRY ───────────────────────────────────────────
 % Usage: \cventry{date}{location}{dot-color}{title}{company}{description}
 \newcommand{\cventry}[6]{%
+\vspace{4pt}
   \begin{tabular}[t]{p{3.1cm} c p{8.5cm}}
-    {\small\color{cvgray}#2 \newline \textit{\small #1}} &
+    {\phantom{.}\small\color{cvgray}#2 \newline \phantom{.}\textit{\small #1}} &
     \cvdot[#3] &
     {\small\textbf{#4}%
     \ifthenelse{\equal{#5}{}}{}{\textit{ #5}}%
@@ -129,7 +130,7 @@
 
 %% ─── RIGHT SECTION TITLE ────────────────────────────────────────────────────
 \newcommand{\rightsection}[1]{%
-  \vspace{6pt}%
+  \vspace{16pt}%
   {\color{cvblue}\normalsize\bfseries\MakeUppercase{#1}}%
   \vspace{2pt}%
   {\color{cvlightgray}\hrule height 0.6pt}%
