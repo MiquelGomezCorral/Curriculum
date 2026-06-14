@@ -74,6 +74,9 @@
 
 \newcommand{\cvdot}[1][cvblue]{%
   \stepcounter{cventrycount}%
+  \ifnum\value{cventrycount}=1
+    \expandafter\gdef\csname firstdotcolor@\thecvlineid\endcsname{#1}%
+  \fi
   \begin{tikzpicture}[baseline={([yshift=-3.0pt] cvdot-\thecvlineid-\thecventrycount.center)}, remember picture]
     \ifstrequal{#1}{dotgreen}{%
       \node[circle, fill=dotlightgreen, draw=dotgreen, line width=1.2pt, inner sep=0pt, minimum size=10pt] (cvdot-\thecvlineid-\thecventrycount) at (0,0) {};
@@ -88,12 +91,26 @@
   \stepcounter{cvlineid}%
 }
 
+\def\dotgreentoken{dotgreen}
+
 \newcommand{\drawtimelinelines@draw}[3]{%
-  \AddToShipoutPictureBG{%
-    \begin{tikzpicture}[remember picture, overlay]
-      \draw[cvlightblue, line width=1.5pt] (cvdot-#1-1.center) -- (cvdot-#1-#2.center);
-    \end{tikzpicture}%
-  }%
+  \edef\tempcolor{\csname firstdotcolor@#1\endcsname}%
+  \ifx\tempcolor\dotgreentoken
+    \AddToShipoutPictureBG{%
+      \begin{tikzpicture}[remember picture, overlay]
+        \draw[dotgreen, line width=1.5pt] (cvdot-#1-1.center) -- (cvdot-#1-2.center);
+        \ifnum#2>2
+          \draw[cvlightblue, line width=1.5pt] (cvdot-#1-2.center) -- (cvdot-#1-#2.center);
+        \fi
+      \end{tikzpicture}%
+    }%
+  \else
+    \AddToShipoutPictureBG{%
+      \begin{tikzpicture}[remember picture, overlay]
+        \draw[cvlightblue, line width=1.5pt] (cvdot-#1-1.center) -- (cvdot-#1-#2.center);
+      \end{tikzpicture}%
+    }%
+  \fi
 }
 
 \newcommand{\drawtimelinelines}[1][cvlightgray]{%
