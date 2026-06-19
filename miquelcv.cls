@@ -128,15 +128,20 @@
 %% ─── EXPERIENCE / EDUCATION ENTRY ───────────────────────────────────────────
 % Usage: \cventry{date}{location}{dot-color}{title}{company}{description}
 \newcommand{\cventry}[6]{%
-\vspace{4pt}
-  \begin{tabular}[t]{p{3.1cm} c p{8.5cm}}
-    {\phantom{.}\small\color{cvgray}#2 \newline \phantom{.}\textit{\small #1}} &
+  \begin{tabular}[t]{@{}c p{11.6cm}@{}}
     \cvdot[#3] &
     {\small\textbf{#4}%
     \ifthenelse{\equal{#5}{}}{}{\textit{ #5}}%
-    \newline {\footnotesize #6}}
+    \hfill {\small\color{cvgray}#2, \textit{\small #1}}%
+    \newline {\footnotesize #6}}%
   \end{tabular}%
   \vspace{0pt}%
+}
+
+%% ─── TECH STACK (for use inside \cventry descriptions) ──────────────────────
+\newcommand{\techstack}[1]{%
+  \par\vspace{2pt}%
+  {\footnotesize\textbf{Tech:} #1}%
 }
 
 %% ─── CONTACT ITEM ───────────────────────────────────────────────────────────
