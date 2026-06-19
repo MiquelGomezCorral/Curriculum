@@ -133,7 +133,7 @@
     {\small\textbf{#4}%
     \ifthenelse{\equal{#5}{}}{}{\textit{ #5}}%
     \hfill {\small\color{cvgray}#2, \textit{\small #1}}%
-    \par {\footnotesize #6}}%
+    \par\vspace{2pt} {\footnotesize #6}}%
   \end{tabular}%
   \vspace{10pt}%
 }
