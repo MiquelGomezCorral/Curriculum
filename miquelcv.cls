@@ -128,7 +128,7 @@
 %% ─── EXPERIENCE / EDUCATION ENTRY ───────────────────────────────────────────
 % Usage: \cventry{date}{location}{dot-color}{title}{company}{description}
 \newcommand{\cventry}[6]{%
-  \begin{tabular}[t]{@{}c p{11.6cm}@{}}
+  \begin{tabular}[t]{@{}c p{12.1cm}@{}}
     \cvdot[#3] &
     {\small\textbf{#4}%
     \ifthenelse{\equal{#5}{}}{}{\textit{ #5}}%
