@@ -135,7 +135,7 @@
     \hfill {\small\color{cvgray}#2, \textit{\small #1}}%
     \par\vspace{2pt} {\footnotesize #6}}%
   \end{tabular}%
-  \vspace{10pt}%
+  \vspace{6pt}%
 }
 
 %% ─── TECH STACK (for use inside \cventry descriptions) ──────────────────────
