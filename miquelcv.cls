@@ -141,7 +141,7 @@
 %% ─── TECH STACK (for use inside \cventry descriptions) ──────────────────────
 \newcommand{\techstack}[1]{%
   \par\vspace{2pt}%
-  {\footnotesize\textbf{Tech:} #1}%
+  {\footnotesize\textbf{Tecnologías:} #1}%
 }
 
 %% ─── CONTACT ITEM ───────────────────────────────────────────────────────────
