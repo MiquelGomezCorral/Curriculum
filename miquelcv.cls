@@ -133,14 +133,14 @@
     {\small\textbf{#4}%
     \ifthenelse{\equal{#5}{}}{}{\textit{ #5}}%
     \hfill {\small\color{cvgray}#2, \textit{\small #1}}%
-    \newline {\footnotesize #6}}%
+    \par {\footnotesize #6}}%
   \end{tabular}%
-  \vspace{0pt}%
+  \vspace{10pt}%
 }
 
 %% ─── TECH STACK (for use inside \cventry descriptions) ──────────────────────
 \newcommand{\techstack}[1]{%
-  \par\vspace{2pt}%
+  \par\vspace{0pt}%
   {\footnotesize\textbf{Tecnologías:} #1}%
 }
 
