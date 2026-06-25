@@ -18,7 +18,11 @@ screenShoots:
   - readme-images/Curriculum (2).png
   - readme-images/Curriculum (3).png
   - readme-images/Miquel.png
+keywords:
+  en: [LaTeX CV, resume template, two-column resume, LuaLaTeX, fontawesome, paracol, academic CV, bilingual resume, custom document class, TikZ overlay]
+  es: [CV LaTeX, plantilla de currículum, currículum a dos columnas, LuaLaTeX, fontawesome, paracol, CV académico, currículum bilingüe, clase de documento personalizada, overlay TikZ]
 slug: Curriculum
 order: 8
 featured: false
+
 
