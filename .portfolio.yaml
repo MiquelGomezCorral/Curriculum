@@ -10,7 +10,7 @@ descriptionLong:
     My personal curriculum vitae built as a LaTeX project with a fully custom document class (miquelcv.cls). Features a two-column layout via paracol with a shaded right sidebar (TikZ overlay), custom section headers, skill rows with proficiency levels, and contact icons via fontawesome5. Available in both English and Spanish. Compiled with LuaLaTeX. The repo serves as a CV template — fork it, replace the photo and content, and you have your own polished CV in minutes.
   es: |
     Mi curriculum vitae personal construido como proyecto LaTeX con una clase de documento completamente personalizada (miquelcv.cls). Cuenta con un diseño a dos columnas mediante paracol con barra lateral sombreada (overlay TikZ), cabeceras de sección personalizadas, filas de habilidades con niveles, e iconos de contacto vía fontawesome5. Disponible en inglés y español. Compilado con LuaLaTeX. El repo funciona como plantilla de CV — hazle fork, cambia la foto y el contenido, y tienes tu propio CV pulido en minutos.
-technologies: [git]
+technologies: [latex]
 tags: [other]
 logo: readme-images/Curriculum (1).png
 screenShoots:
@@ -27,6 +27,7 @@ keywords:
 slug: Curriculum
 order: 8
 featured: false
+
 
 
 
