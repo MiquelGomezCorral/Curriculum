@@ -1,6 +1,6 @@
 title:
-  en: LaTeX CV — Miquel Gómez Corral
-  es: CV en LaTeX — Miquel Gómez Corral
+  en: LaTeX CV — Personal
+  es: CV en LaTeX — Personal
 finished: finished
 descriptionShort:
   en: My personal CV in LaTeX, available in English and Spanish. Uses a custom class (miquelcv.cls) with a clean two-column layout, skill rows, and TikZ overlays. Compiled with LuaLaTeX. Template-ready for anyone to fork and adapt.
